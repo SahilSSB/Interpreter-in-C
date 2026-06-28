@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.15)
+project(interpreter)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_executable(interpreter
+  main.c
+  chunk.c
+  memory.c
+  debug.c
+  value.c
+)
