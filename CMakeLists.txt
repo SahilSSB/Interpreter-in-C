@@ -10,4 +10,5 @@ add_executable(interpreter
   memory.c
   debug.c
   value.c
+  vm.c
 )
