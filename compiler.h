@@ -1,6 +1,8 @@
 #ifndef CLOX_COMPILER_H
 #define CLOX_COMPILER_H
 
-void compile(const char* soure);
+#include "vm.h"
+
+bool compile(const char* soure, Chunk* chunk);
 
 #endif
