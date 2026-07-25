@@ -13,4 +13,5 @@ add_executable(Interpreter-in-C
   vm.c
   compiler.c
   scanner.c
+  object.c
 )
