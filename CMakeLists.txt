@@ -14,4 +14,5 @@ add_executable(Interpreter-in-C
   compiler.c
   scanner.c
   object.c
+  table.c
 )
