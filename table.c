@@ -33,6 +33,8 @@ static Entry* findEntry(Entry* entries, int capacity, ObjString* key) {
     }
     else if (entry->key == key)
       return entry;
+
+    index = (index + 1) % capacity;
   }
 } 
 
@@ -71,7 +73,7 @@ static void adjustCapacity(Table* table, int capacity) {
 }
 
 bool tableSet(Table* table, ObjString *key, Value value) {
-  if (table->count + 1 > table->capacity + MAX_TABLE_LOAD) {
+  if (table->count + 1 > table->capacity * MAX_TABLE_LOAD) {
     int capacity = GROW_CAPACITY(table->capacity);
     adjustCapacity(table, capacity);
   }
